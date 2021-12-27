@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Footer = (): JSX.Element => {
   return (
@@ -10,17 +11,15 @@ const Footer = (): JSX.Element => {
       <div className={'container flex gap-2 justify-between items-center'}>
         <span>Powered by</span>
         <a
-          href={'https://nextjs.org/'}
+          href={'https://www.gatsbyjs.com/'}
           target={'_blank'}
           rel={'noreferrer noopener'}
         >
-          <img
-            src="/images/service/next-js.svg"
-            alt="Next.js"
-            width="1365"
-            height="1365"
-            loading="lazy"
-            className={'w-[16px]'}
+          <StaticImage
+            src={'../../images/service/gatsby.svg'}
+            alt={'gatsby'}
+            className={'w-4'}
+            placeholder={'tracedSVG'}
           />
         </a>
         <a
