@@ -1,0 +1,53 @@
+.timeline {
+  @apply list-none relative pl-0;
+
+  .timeline__item {
+    @apply my-0 relative;
+    @apply md:flex md:pt-0;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: theme('colors.blue.400');
+      position: absolute;
+      left: 2px;
+      top: 18px;
+      border-radius: 100%;
+
+      @screen md {
+        left: 102px;
+        top: 23px;
+      }
+    }
+
+    /* 現在地のドットをアニメーションさせる */
+    &:first-of-type::before {
+      @apply animate-ping;
+    }
+  }
+
+  .timeline__date,
+  .timeline__content {
+    @apply pl-8 border-gray-200 border-l-4;
+  }
+
+  .timeline__date {
+    @apply shrink-0 pt-3 text-blue-400;
+    @apply md:border-none md:pl-0 md:w-[100px] md:pt-4;
+  }
+
+  .timeline__content {
+    @apply pt-2 pb-3;
+    @apply md:mt-0 md:py-4;
+  }
+
+  .timeline__title {
+    @apply -mt-0.5;
+  }
+
+  .timeline__desc {
+    @apply text-gray-400;
+  }
+}
