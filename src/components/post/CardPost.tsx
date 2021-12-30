@@ -36,6 +36,7 @@ const CardPost = ({ post, className }: CardPostProps): JSX.Element => {
           {post.frontmatter?.emoji}
         </span>
         <h2 className={'inline'}>{post.frontmatter?.title}</h2>
+        <p className="mt-4 mb-0 text-sm text-gray-500">{post.excerpt}</p>
       </Link>
       <div className={'mt-4'}>
         {post.frontmatter?.tags &&
