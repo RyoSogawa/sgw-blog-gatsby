@@ -57,7 +57,7 @@ const PageAbout = () => {
 
       <Favorites />
 
-      {/*<WorkExperience />*/}
+      <WorkExperience />
 
       <section>
         <h2 id={'education'}>Education</h2>

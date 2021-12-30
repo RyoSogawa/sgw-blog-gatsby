@@ -47,6 +47,7 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
+    '@typescript-eslint/no-var-requires': 'off',
     'object-shorthand': ['error', 'properties'],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'tailwindcss/classnames-order': 'warn',

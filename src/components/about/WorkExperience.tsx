@@ -1,7 +1,8 @@
 import React from 'react'
-import style from './WorkExperience.module.css'
 
 const WorkExperience = (): JSX.Element => {
+  const style = require('./WorkExperience.module.css')
+
   return (
     <section>
       <h2 id={'work-experience'}>Work Experience</h2>
