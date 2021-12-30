@@ -1,25 +1,25 @@
 ---
 title: '本ブログの構成について'
 emoji: '⚙️'
-tags: ['Next.js', 'mdx']
-createdAt: '2021-12-18'
-updatedAt: '2021-12-18'
+tags: ['Gatsby']
+createdAt: '2021-12-30'
+updatedAt: '2021-12-30'
 ---
 
 このブログは
 
-- Next.js(SG)
-- MDX
+- Gatsby
+- markdown
 - TailwindCSS
 - Vercel
 
 を使っています。
 
-https://github.com/RyoSogawa/sgw-dev
+https://github.com/RyoSogawa/sgw-blog-gatsby
 
 それぞれについて簡単に解説したいと思います。
 
-## Next.js について
+## Gatsby について
 
 このブログを作り始めたころ、ちょうど[Remix](https://remix.run)が登場したこともあり、
 
@@ -29,73 +29,26 @@ https://github.com/RyoSogawa/sgw-dev
 
 の 3 つの選択肢がありました。
 
-Remix の素振りも兼ねていいかもなとも思ったのですが、そんなに頻繁に更新しないであろうブログとの相性を考えると SG がよく、使い慣れてる Next.js に落ち着きました。
+Remix の素振りも兼ねていいかもなとも思ったのですが、そんなに頻繁に更新しないであろうブログとの相性を考えると SSG にしようかと。
 
-## 記事投稿について
+使い慣れてる Next.js を使って作りリリースしたものの、途中で Gatsby のほうが条件がよいことに後々気づいたため移行しました。
+
+※そのときのことはまた別の記事で書こうと思います。
+
+## 記事投稿
 
 記事投稿の方法は
 
-- MDX
+- markdown
 - GitHubIssue
-- Notion
+- NotionAPI
 - microCMS 等のヘッドレス CMS
 
-から MDX を選択しました。
+等から markdown を選択しました。
 
-GitHub の issue を記事とし、GitHubActions で GitHubPage にデプロイするリポジトリ（[Gh-cms](https://github.com/oscarnevarezleal/gh-cms)）がとてもおもしろかったので、なんらかの形で GitHubIssue を使いたいなと思ってたんですけど、とりあえず早くリリースできそうな MDX を選択しました。
+GitHub の issue を記事とし、GitHubActions で GitHubPage にデプロイするリポジトリ（[Gh-cms](https://github.com/oscarnevarezleal/gh-cms)）がおもしろかったので、なんらかの形で GitHubIssue を使いたいなと思ってたんですけど、とりあえず早くリリースできそうな markdown を選択しました。
 
-将来的にはポートフォリオのページを一部パスワード制限で公開等しようと思ってるので、そのときに MDX では限界がある（リポジトリが public である以上、パスワードの意味が薄くなる）ので、そのときはまた別の方法を使おうと思ってます。
-
-### MDX の実装方法
-
-いくつか実装方法に選択肢がありましたが、純粋に公式で紹介されていた`@next/mdx`パッケージを使って実現しています。
-
-[公式ドキュメント](https://nextjs.org/docs/advanced-features/using-mdx)
-
-pages 内に mdx ファイルを配置でき、ラッパー等も自由に設定できたのでいろいろちょうどよかったです。
-
-一般的に mdx ファイルは frontmatter のようなライブラリを使って meta 情報を格納しますが、このライブラリでは meta 情報はオブジェクトで保持するようです。
-
-```jsx
-// この記事ファイルのmeta情報とラッパー
-import PagePost from '../../components/page/PagePost'
-export const meta = {
-  title: '本ブログの構成について',
-  emoji: '⚙️',
-  tags: ['Next.js', 'mdx'],
-  createdAt: '2021-12-18',
-  updatedAt: '2021-12-18',
-}
-export default ({ children }) => <PagePost meta={meta}>{children}</PagePost>
-```
-
-（ここで meta の型指定ができたら、記事ごとの meta 情報の格納漏れがチェックできたんですけど、mdx で ts が動作するようにはできるんでしょうか？）
-
-次に、一覧ページの実装方法はこちらの記事を参考にしました。
-https://blog.omoidasu.dev/posts/2020-06-13-blog-opened
-
-```ts
-import * as fs from 'fs'
-import * as path from 'path'
-
-export const getAllPosts = (): Post[] => {
-  const mdxFileNames = fs.readdirSync(path.resolve('.', 'src', 'pages', 'post'))
-
-  return mdxFileNames
-    .map(fileName => {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const post = require(`../pages/post/${fileName}`)
-
-      return {
-        ...post.meta,
-        slug: fileName.replace(/.mdx$/, ''),
-      }
-    })
-    .sort((a: Post, b: Post) => (a.createdAt > b.createdAt ? 0 : 1))
-}
-```
-
-この関数で前記事の meta 情報と slug を取得し、page ファイルの`getStaticProps`で記事データを取得しています。
+将来的にはポートフォリオのページを一部パスワード制限で公開等しようと思っているので、そのときはまた別の方法を使おうと思ってます。
 
 ## TailwindCSS について
 
@@ -177,11 +130,12 @@ plugins: [
 
 料金まわりはちょっと気になりますが、とりあえず ISR をいれない純粋な SG であればよほど更新しまくらない限り問題ないかと。
 
-## これから追加したい機能
+## 追加したい機能
 
-最後に実装したい機能を書いて置こうと思います。
+今後実装したい機能をメモがてら
 
 - パスワード制限のポートフォリオページ
 - ブログカード
 - ダークモード
+- 目次、見出しリンク
 - コメント機能
