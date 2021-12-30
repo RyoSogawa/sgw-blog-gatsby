@@ -4,7 +4,6 @@ import PagePosts from '../components/page/PagePosts'
 
 const PageIndex: React.FC<PageProps<GatsbyTypes.PageIndexQuery>> = ({
   data,
-  location,
 }) => {
   const posts = data.allMarkdownRemark.nodes
 

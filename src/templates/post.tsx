@@ -4,7 +4,6 @@ import PagePost from '../components/page/PagePost'
 
 const TemplatePost: React.FC<PageProps<GatsbyTypes.TemplatePostQuery>> = ({
   data,
-  location,
 }) => {
   const post = data.markdownRemark
   // const { previous, next } = data
