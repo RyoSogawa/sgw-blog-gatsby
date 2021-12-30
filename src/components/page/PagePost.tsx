@@ -5,6 +5,7 @@ import PostTag from '../post/PostTag'
 import PostDate from '../post/PostDate'
 import Seo from '../layout/Seo'
 import PostNavi from '../post/PostNavi'
+import BackLink from '../uiParts/BackLink'
 
 export type PagePostProps = {
   post: Post
@@ -24,9 +25,7 @@ const PagePost = ({ post, prevPost, nextPost }: PagePostProps): JSX.Element => {
         // publishedTime={meta.createdAt}
         // modifiedTime={meta.updatedAt}
       />
-      <Link to={'/'} className={'inline-block'}>
-        一覧に戻る
-      </Link>
+      <BackLink to={'/'} />
       <div className={'mt-4'}>
         {post.frontmatter?.createdAt && (
           <PostDate date={post.frontmatter.createdAt} />
@@ -84,9 +83,7 @@ const PagePost = ({ post, prevPost, nextPost }: PagePostProps): JSX.Element => {
         </div>
       </div>
 
-      <Link to={'/'} className={'inline-block mt-10'}>
-        一覧に戻る
-      </Link>
+      <BackLink to={'/'} className={'mt-10'} />
     </Layout>
   )
 }
