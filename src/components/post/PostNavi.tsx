@@ -22,10 +22,10 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
           width="20"
           height="20"
           loading="lazy"
-          className={'mr-2'}
+          className={'mr-2 shrink-0'}
         />
       )}
-      <div>
+      <div className={'grow'}>
         <span className="font-mono text-sm text-gray-500">{direction}</span>
         <h2 className="text-blue-500 line-clamp-2">{title}</h2>
       </div>
@@ -36,7 +36,7 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
           width="20"
           height="20"
           loading="lazy"
-          className={'ml-2'}
+          className={'ml-2 shrink-0'}
         />
       )}
     </Link>

@@ -59,7 +59,7 @@ const PagePost = ({ post, prevPost, nextPost }: PagePostProps): JSX.Element => {
         />
       )}
 
-      <div className="md:flex justify-between mt-10 not-prose">
+      <div className="md:flex justify-between mt-20 not-prose">
         <div className="md:w-[45%]">
           {prevPost &&
             prevPost?.frontmatter?.title &&

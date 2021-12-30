@@ -38,7 +38,7 @@ const CardPost = ({ post, className }: CardPostProps): JSX.Element => {
         <h2 className={'inline'}>{post.frontmatter?.title}</h2>
         <p className="mt-4 mb-0 text-sm text-gray-500">{post.excerpt}</p>
       </Link>
-      <div className={'mt-4'}>
+      <div className={'mt-2'}>
         {post.frontmatter?.tags &&
           post.frontmatter.tags.map(
             tag => tag && <PostTag key={tag} name={tag} />
