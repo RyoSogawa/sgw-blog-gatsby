@@ -5,12 +5,11 @@ import PagePost from '../components/page/PagePost'
 const TemplatePost: React.FC<PageProps<GatsbyTypes.TemplatePostQuery>> = ({
   data,
 }) => {
-  const post = data.markdownRemark
-  // const { previous, next } = data
+  const { markdownRemark: post, previous, next } = data
 
   if (!post) return null
 
-  return <PagePost post={post} />
+  return <PagePost post={post} prevPost={previous} nextPost={next} />
 }
 
 export default TemplatePost
