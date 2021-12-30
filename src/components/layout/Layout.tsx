@@ -3,12 +3,15 @@ import { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Seo from './Seo'
+import { useViewport } from '../../lib/hooks/useViewport'
 
 export type LayoutProps = {
   children: ReactNode
 }
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
+  useViewport()
+
   return (
     <div className={'flex flex-col justify-between min-h-screen'}>
       <Seo title={''} />
