@@ -55,12 +55,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `G-5JCXM1ZQB2`,
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -82,9 +82,9 @@ module.exports = {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  date: node.frontmatter.createdAt,
+                  url: site.siteMetadata.siteUrl + '/post' + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/post' + node.fields.slug,
                   custom_elements: [{ 'content:encoded': node.html }],
                 })
               })
@@ -92,7 +92,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { order: DESC, fields: [frontmatter___createdAt] },
                 ) {
                   nodes {
                     excerpt
@@ -102,14 +102,14 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      date
+                      createdAt
                     }
                   }
                 }
               }
             `,
             output: '/rss.xml',
-            title: 'Gatsby Starter Blog RSS Feed',
+            title: SITE_NAME,
           },
         ],
       },
@@ -130,6 +130,6 @@ module.exports = {
     `gatsby-plugin-typegen`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
