@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import IconArrow from '../svg/IconArrow'
 
 export type PostNaviProps = {
   title: string
@@ -12,31 +13,27 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
     <Link
       to={href}
       className={
-        'flex justify-between py-4 px-6 w-full h-full hover:bg-gray-50 rounded border transition-colors'
+        'group flex justify-between py-4 px-6 w-full h-full hover:bg-gray-50 rounded border transition-colors'
       }
     >
       {direction === 'prev' && (
-        <img
-          src="/images/arrow-back-outline.svg"
-          alt=""
-          width="20"
-          height="20"
-          loading="lazy"
-          className={'mr-2 shrink-0'}
+        <IconArrow
+          direction={'prev'}
+          className={
+            'mr-2 w-5 text-blue-500 transition-transform group-hover:-translate-x-0.5 shrink-0'
+          }
         />
       )}
       <div className={'grow'}>
         <span className="font-mono text-sm text-gray-500">{direction}</span>
-        <h2 className="text-blue-500 line-clamp-2">{title}</h2>
+        <h2 className="font-bold line-clamp-2">{title}</h2>
       </div>
       {direction === 'next' && (
-        <img
-          src="/images/arrow-forward-outline.svg"
-          alt=""
-          width="20"
-          height="20"
-          loading="lazy"
-          className={'ml-2 shrink-0'}
+        <IconArrow
+          direction={'next'}
+          className={
+            'ml-2 w-5 text-blue-500 transition-transform group-hover:translate-x-0.5 shrink-0'
+          }
         />
       )}
     </Link>
