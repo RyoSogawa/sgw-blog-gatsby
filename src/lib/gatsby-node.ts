@@ -19,7 +19,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___createdAt], order: DESC }
+          sort: { fields: [frontmatter___createdAt] }
           limit: 1000
         ) {
           nodes {
