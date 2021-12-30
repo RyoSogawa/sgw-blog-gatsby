@@ -1,6 +1,7 @@
 import React from 'react'
 import NavLink from '../uiParts/NavLink'
 import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Header = (): JSX.Element => {
   return (
@@ -11,12 +12,11 @@ const Header = (): JSX.Element => {
     >
       <div className={'container flex items-center'}>
         <Link to={'/'} className={'flex items-center'}>
-          <img
-            src="/images/logo/dinosaur_record_rectangle.svg"
+          <StaticImage
+            src="../../images/logo/dinosaur_record_rectangle.svg"
             alt=""
-            width="337"
-            height="337"
             className={'mr-2 w-8'}
+            placeholder={'tracedSVG'}
           />
           <span className={'text-xl font-extrabold tracking-tighter'}>sgw</span>
         </Link>
@@ -36,12 +36,11 @@ const Header = (): JSX.Element => {
                 rel={'noreferrer noopener'}
                 className={'grid place-items-center'}
               >
-                <img
-                  src={'/images/service/github.svg'}
-                  width={24}
-                  height={24}
+                <StaticImage
+                  src={'../../images/service/github.svg'}
                   alt={'GitHub'}
                   className={'w-6 h-6 text-black'}
+                  placeholder={'tracedSVG'}
                 />
               </a>
             </li>

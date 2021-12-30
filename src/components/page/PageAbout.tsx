@@ -3,18 +3,19 @@ import Layout from '../layout/Layout'
 import Services from '../about/Services'
 import WorkExperience from '../about/WorkExperience'
 import Favorites from '../about/Favorites'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const PageAbout = () => {
   return (
     <Layout>
       <h1>About</h1>
       <div className={'flex items-center'}>
-        <img
-          src="/images/logo/dinosaur_record_round.svg"
-          width="337"
-          height="337"
+        <StaticImage
+          src="../../images/logo/dinosaur_record_round.svg"
+          width={337}
+          height={337}
           alt={''}
-          className={'w-10 shrink-0'}
+          className={'w-10 h-10 rounded-full shrink-0'}
         />
         <div className={'mr-10 ml-3 font-mono font-bold shrink-0'}>
           Ryo Sogawa
@@ -125,9 +126,6 @@ const PageAbout = () => {
           <li>坂本 慎太郎</li>
         </ul>
       </section>
-
-      <h4>test</h4>
-      <h5>test</h5>
     </Layout>
   )
 }

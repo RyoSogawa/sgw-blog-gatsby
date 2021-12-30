@@ -14,6 +14,7 @@ const Footer = (): JSX.Element => {
           href={'https://www.gatsbyjs.com/'}
           target={'_blank'}
           rel={'noreferrer noopener'}
+          className={'grid place-items-center'}
         >
           <StaticImage
             src={'../../images/service/gatsby.svg'}
@@ -26,28 +27,26 @@ const Footer = (): JSX.Element => {
           href={'https://tailwindcss.com/'}
           target={'_blank'}
           rel={'noreferrer noopener'}
+          className={'grid place-items-center'}
         >
-          <img
-            src="/images/service/tailwind-css.svg"
+          <StaticImage
+            src="../../images/service/tailwind-css.svg"
             alt="TailwindCSS"
-            width="2500"
-            height="1499"
-            loading="lazy"
             className={'w-[20px]'}
+            placeholder={'tracedSVG'}
           />
         </a>
         <a
           href={'https://vercel.com/'}
           target={'_blank'}
           rel={'noreferrer noopener'}
+          className={'grid place-items-center'}
         >
-          <img
-            src="/images/service/vercel.svg"
+          <StaticImage
+            src="../../images/service/vercel.svg"
             alt="Vercel"
-            width="283"
-            height="64"
-            loading="lazy"
             className={'w-[50px]'}
+            placeholder={'tracedSVG'}
           />
         </a>
         <div className={'grow'} />
