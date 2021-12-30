@@ -14,11 +14,11 @@
   "scripts": {
     "dev": "gatsby develop",
     "typecheck": "tsc",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint:text": "textlint ./content/**/*.md",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:text": "textlint ./content/**/*.md --fix"
   },
   "dependencies": {
