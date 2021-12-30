@@ -7,16 +7,32 @@
   body {
     @apply text-black;
   }
+
+  a {
+    word-break: break-all;
+  }
 }
 
 @layer utilities {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none !important;
-    font-family: "JetBrains Mono", monospace !important;
+  .prose {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "JetBrains Mono", monospace !important;
+    }
 
-    .token.operator {
-      background: none;
+    :not(pre) > code.language-text {
+      color: theme('colors.black');
+      background: theme('colors.gray.200');
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+
+      &::selection {
+        background: theme('colors.blue.300');
+      }
+
+      &::before, &::after {
+        content: '';
+      }
     }
   }
 }
