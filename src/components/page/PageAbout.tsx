@@ -45,18 +45,14 @@ const PageAbout = () => {
         <p>
           <strong>「よいUXは、よいDX（開発者体験）からしか生まれない」</strong>
           という気持ちから、DXを最も大事にしています。
-          <br />
-          DX向上のために、
-          <br />
-          <ul>
-            <li>なるべく快適な開発環境を構築する（自動化、効率化）</li>
-            <li>
-              コミュニケーションを丁寧にする（無駄なネガティブを生まない）
-            </li>
-            <li>コードレビュー / 勉強会</li>
-          </ul>
-          といった取り組みに特に力を入れています。
         </p>
+        DX向上のために、
+        <ul>
+          <li>なるべく快適な開発環境を構築する（自動化、効率化）</li>
+          <li>コミュニケーションを丁寧にする（無駄なネガティブを生まない）</li>
+          <li>コードレビュー / 勉強会</li>
+        </ul>
+        といった取り組みに特に力を入れています。
       </section>
 
       <Favorites />
@@ -81,7 +77,7 @@ const PageAbout = () => {
         </ul>
       </section>
 
-      <h2 id={'others'}>Others</h2>
+      <h2 id={'hobbies'}>Hobbies</h2>
       <section>
         <h3 id={'keyboard'}>Keyboard</h3>
         <p>
