@@ -127,6 +127,7 @@ module.exports = {
         icon: `src/images/dinosaur_record_rectangle.png`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typegen`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
