@@ -18,8 +18,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint:text": "textlint ./content/**/*.md",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "format:text": "textlint ./content/**/*.md --fix"
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
+    "lint": "tsc && yarn lint:text && yarn lint:js",
+    "format:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:lint": "yarn lint:js --fix",
+    "format:text": "textlint ./content/**/*.md --fix",
+    "format": "yarn format:prettier && yarn format:lint && yarn format:text"
   },
   "dependencies": {
     "clsx": "^1.1.1",
