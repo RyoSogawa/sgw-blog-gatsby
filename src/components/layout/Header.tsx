@@ -31,7 +31,7 @@ const Header = (): JSX.Element => {
             </li>
             <li>
               <a
-                href={'https://github.com/RyoSogawa/sgw-dev'}
+                href={'https://github.com/RyoSogawa/sgw-blog-gatsby'}
                 target={'_blank'}
                 rel={'noreferrer noopener'}
                 className={'grid place-items-center'}
