@@ -8,3 +8,15 @@
     @apply text-black;
   }
 }
+
+@layer utilities {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none !important;
+    font-family: "JetBrains Mono", monospace !important;
+
+    .token.operator {
+      background: none;
+    }
+  }
+}
