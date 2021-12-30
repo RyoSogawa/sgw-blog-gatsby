@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import clsx from 'clsx'
+import { useLocation } from '@reach/router'
 
 export type NavLinkProps = {
   href: string
   title: string
-  pathname?: string
 }
 
-const NavLink = ({ title, href, pathname }: NavLinkProps): JSX.Element => {
+const NavLink = ({ title, href }: NavLinkProps): JSX.Element => {
+  const { pathname } = useLocation()
+
   return (
     <Link
       to={href}
