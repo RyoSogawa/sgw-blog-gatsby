@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 export type SeoProps = {
   description?: string
-  meta?: []
+  meta?: JSX.IntrinsicElements['meta'][] | undefined
   title?: string
 }
 
@@ -68,7 +68,8 @@ const Seo = ({ description = '', meta = [], title }: SeoProps): JSX.Element => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+        ...meta,
+      ]}
     >
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link

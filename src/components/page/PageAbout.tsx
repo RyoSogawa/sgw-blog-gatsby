@@ -4,10 +4,12 @@ import Services from '../about/Services'
 import WorkExperience from '../about/WorkExperience'
 import Favorites from '../about/Favorites'
 import { StaticImage } from 'gatsby-plugin-image'
+import Seo from '../layout/Seo'
 
 const PageAbout = () => {
   return (
     <Layout>
+      <Seo title={'About'} />
       <h1>About</h1>
       <div className={'flex items-center'}>
         <StaticImage

@@ -16,10 +16,7 @@ const PagePost = ({ post, prevPost, nextPost }: PagePostProps): JSX.Element => {
   return (
     <Layout>
       <Seo
-        title={
-          post.frontmatter?.emoji &&
-          post.frontmatter.emoji + post.frontmatter?.title
-        }
+        title={post.frontmatter?.title}
         // tags={meta.tags}
         // publishedTime={meta.createdAt}
         // modifiedTime={meta.updatedAt}
