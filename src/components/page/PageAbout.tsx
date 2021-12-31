@@ -16,6 +16,7 @@ const PageAbout = () => {
           src="../../images/logo/dinosaur_record_round.svg"
           width={337}
           height={337}
+          quality={100}
           alt={''}
           className={'w-10 h-10 rounded-full shrink-0'}
         />
@@ -25,12 +26,14 @@ const PageAbout = () => {
         <Services />
       </div>
       <p>
-        香川県出身福岡県在住の33歳1児の父。フリーランスでエンジニアをしています。
+        香川県出身福岡県在住の 33 歳 1
+        児の父。フリーランスでエンジニアをしています。
         <br />
-        Reactを中心としたWebフロントエンドをメインで担当していますが、企画 /
-        要件定義 / UIデザイン / システム設計 / バックエンド / インフラ /
+        React を中心としたWebフロントエンドをメインで担当していますが、企画 /
+        要件定義 / UI デザイン / システム設計 / バックエンド / インフラ /
         ネイティブアプリ等もやっています。
-        <br />
+      </p>
+      <p>
         お仕事のご依頼・ご相談は
         <a
           href="mailto:koashimitekara.1122@gmail.com"
@@ -45,10 +48,12 @@ const PageAbout = () => {
       <section>
         <h2 id={'policy'}>Policy</h2>
         <p>
-          <strong>「よいUXは、よいDX（開発者体験）からしか生まれない」</strong>
-          という気持ちから、DXを最も大事にしています。
+          <strong>
+            「よい UX は、よい DX （開発者体験）からしか生まれない」
+          </strong>
+          という気持ちから、DX を最も大事にしています。
         </p>
-        DX向上のために、
+        DX 向上のために、
         <ul>
           <li>なるべく快適な開発環境を構築する（自動化、効率化）</li>
           <li>コミュニケーションを丁寧にする（無駄なネガティブを生まない）</li>
@@ -104,7 +109,7 @@ const PageAbout = () => {
         <iframe
           src="https://open.spotify.com/embed/album/5vlz4IQH6VTUWdQEqjjkQI?utm_source=generator"
           width="100%"
-          height="160"
+          height="210"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         />
