@@ -88,31 +88,6 @@ const Seo = ({ description = '', meta = [], title }: SeoProps): JSX.Element => {
         rel="stylesheet"
       />
       <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicons/apple-touch-icon.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicons/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicons/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicons/favicon-16x16.png"
-      />
-      <link rel="manifest" href="/favicons/site.webmanifest" />
-      <meta name="msapplication-TileColor" content="#231815" />
-      <meta name="theme-color" content="#231815" />
-      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.5.0/prism-darcula.min.css"
         integrity="sha512-K5Xw18pkHMgNX5vlIERxh6YIuU6AiTUUE+yXZAartEQi5dWOjnoVjldVw9hU60zbgxz/Hh/JR9gJ49xf+LG0Cw=="
