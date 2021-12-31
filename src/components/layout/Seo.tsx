@@ -15,6 +15,7 @@ const Seo = ({ description = '', meta = [], title }: SeoProps): JSX.Element => {
         site {
           siteMetadata {
             title
+            siteUrl
             description
             social {
               twitter
@@ -27,6 +28,7 @@ const Seo = ({ description = '', meta = [], title }: SeoProps): JSX.Element => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const siteUrl = site.siteMetadata?.siteUrl
 
   return (
     <Helmet
@@ -51,6 +53,10 @@ const Seo = ({ description = '', meta = [], title }: SeoProps): JSX.Element => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: siteUrl + '/images/ogp.png',
         },
         {
           name: `twitter:card`,
