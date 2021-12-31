@@ -57,8 +57,7 @@
   /*target時はbeforeで高さを増やしてる分を考慮*/
   :target {
     .anchor.before {
-      top: calc(var(--header-height) + 50%);
-      transform: translate(-100%, -50%);
+      top: calc(var(--header-height) / 2 + 50%);
     }
   }
 }
