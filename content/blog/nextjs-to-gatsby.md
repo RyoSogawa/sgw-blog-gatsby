@@ -6,7 +6,7 @@ createdAt: '2021-12-31'
 updatedAt: '2021-12-31'
 ---
 
-Next.js を使って作ったこのブログをなぜ、どのように Gatsby に移行したかを、この記事では記録しようと思います。
+Next.js を使って作ったこのブログをなぜ、どのように Gatsby に移行したかを記録しようと思います。
 
 ## なぜ移行したのか
 
@@ -61,7 +61,7 @@ https://zenn.dev/ryo_kawamata/articles/gatsby-ts-2020
 #### meta データ型
 
 記事内の meta データ（frontmatter）の中身を変えたいときに、markdown 内を変えると自動的に新しいフィールドが生成されることに驚きつつも、初期登録されていたフィールドが消えませんでした。  
-これは`gatsby-node.ts`の`createSchemaCustomization`関数内に定義されているスキーマを更新することで変更できます。
+これは `gatsby-node.ts` の `createSchemaCustomization` 関数内に定義されているスキーマを更新することで変更できます。
 
 #### GraphQL スキーマ用の型
 
@@ -69,28 +69,28 @@ graphql-codegen 等でやるようなスキーマからの型生成はなんと 
 
 https://github.com/cometkim/gatsby-plugin-typegen
 
-こちらのプラグインを設定した状態で、`pageQuery`等を記述すると自動的に型ファイルが生成されます！
+こちらのプラグインを設定した状態で、`pageQuery` 等を記述すると自動的に型ファイルが生成されます！
 
 「自動的に生成される」の響きはこころが温まりますね。。
 
 型定義ファイルでエラーが出ないように tsconfig を設定したりする必要があったり、特にこれといった修正をしてなくてもなぜか差分が生成されてたりとちょっと気になることはありますが、自動生成してくれるのであれば多くは求めません。
 
-ちなみに、template 系のコンポーネントの型は、`pages`配下のコンポーネント用の型定義方法と同様でした。
+ちなみに、template 系のコンポーネントの型は、`pages` 配下のコンポーネント用の型定義方法と同様でした。
 
 ### ② コンポーネントの置き換え
 
-`next/link`、`next/image`コンポーネントを`Link`、`StaticImage`コンポーネントに置き換えていきます。  
-`Link`のほうは特に問題なく移行できましたが、`StaticImage`は結構癖が強いです。
+`next/link`、`next/image` コンポーネントを `Link`、`StaticImage` コンポーネントに置き換えていきます。  
+`Link` のほうは特に問題なく移行できましたが、`StaticImage` は結構癖が強いです。
 
-例えば`props.src`に変数が使えないので、src を配列で設定していたものは StaticImage コンポーネント自体を配列で保持するようにしました。（ちょっとごちゃつく）
+例えば `props.src` に変数が使えないので、src を配列で設定していたものは StaticImage コンポーネント自体を配列で保持するようにしました。（ちょっとごちゃつく）
 
 こういう欠点もありますが、placeholder をいくつかの種類から選択できるのは Gatsby のいいところ。
 
-このブログではだいたい`tracedSVG`を使ってます。
+このブログではだいたい `tracedSVG` を使ってます。
 
 ### ③ useRouter の置き換え
 
-useRouter を使って取得していた pathname 等の情報は、`useLocation`を使います。
+useRouter を使って取得していた pathname 等の情報は、`useLocation` を使います。
 
 ```tsx
 import { useLocation } from '@reach/router'
@@ -121,7 +121,7 @@ const WorkExperience = (): JSX.Element => {
 
 ### ⑤head タグ
 
-`next/head`や`next-seo`を使って設定していた meta 情報は`react-helmet`を使って置き換えていきます。
+`next/head` や `next-seo` を使って設定していた meta 情報は `react-helmet` を使って置き換えていきます。
 
 このプロジェクトでは、Seo コンポーネントを作って対応しました。  
 Seo 向けでない meta 情報はコンポーネント分けてもいいかもなと思ってます。
