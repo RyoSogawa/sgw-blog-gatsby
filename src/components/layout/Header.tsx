@@ -2,6 +2,7 @@ import React from 'react'
 import NavLink from '../uiParts/NavLink'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import IconFeed from '../svg/IconFeed'
 
 const Header = (): JSX.Element => {
   return (
@@ -26,10 +27,10 @@ const Header = (): JSX.Element => {
             <li className={'mr-1'}>
               <NavLink href={'/'}>Posts</NavLink>
             </li>
-            <li className={'mr-4'}>
-              <NavLink href={'/about'}>About</NavLink>
+            <li className={'mr-3'}>
+              <NavLink href={'/about/'}>About</NavLink>
             </li>
-            <li>
+            <li className={'mr-4'}>
               <a
                 href={'https://github.com/RyoSogawa/sgw-blog-gatsby'}
                 target={'_blank'}
@@ -42,6 +43,16 @@ const Header = (): JSX.Element => {
                   className={'w-6 h-6 text-black'}
                   placeholder={'tracedSVG'}
                 />
+              </a>
+            </li>
+            <li>
+              <a
+                href={'/rss.xml'}
+                target={'_blank'}
+                rel={'noreferrer noopener'}
+                className={'grid place-items-center'}
+              >
+                <IconFeed className={'w-6 h-6 fill-black'} />
               </a>
             </li>
           </ul>
