@@ -66,17 +66,15 @@ const PagePost = ({ post, prevPost, nextPost }: PagePostProps): JSX.Element => {
               />
             )}
         </div>
-        <div className="mt-8 md:mt-0 md:w-[45%]">
-          {nextPost &&
-            nextPost?.frontmatter?.title &&
-            nextPost?.fields?.slug && (
-              <PostNavi
-                title={nextPost?.frontmatter?.title}
-                href={'/post' + nextPost?.fields?.slug}
-                direction={'next'}
-              />
-            )}
-        </div>
+        {nextPost && nextPost?.frontmatter?.title && nextPost?.fields?.slug && (
+          <div className="mt-8 md:mt-0 md:w-[45%]">
+            <PostNavi
+              title={nextPost?.frontmatter?.title}
+              href={'/post' + nextPost?.fields?.slug}
+              direction={'next'}
+            />
+          </div>
+        )}
       </div>
 
       <BackLink to={'/'} className={'mt-10'} />

@@ -13,14 +13,14 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
     <Link
       to={href}
       className={
-        'group flex justify-between py-4 px-6 w-full h-full hover:bg-gray-50 rounded border transition-colors'
+        'group flex justify-between items-center py-4 px-6 w-full h-full hover:bg-gray-50 rounded border transition-colors'
       }
     >
       {direction === 'prev' && (
         <IconArrow
           direction={'prev'}
           className={
-            'mr-2 w-5 text-blue-500 transition-transform group-hover:-translate-x-0.5 shrink-0'
+            'mr-2 w-5 h-5 text-blue-500 transition-transform group-hover:-translate-x-0.5 shrink-0'
           }
         />
       )}
@@ -32,7 +32,7 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
         <IconArrow
           direction={'next'}
           className={
-            'ml-2 w-5 text-blue-500 transition-transform group-hover:translate-x-0.5 shrink-0'
+            'ml-2 w-5 h-5 text-blue-500 transition-transform group-hover:translate-x-0.5 shrink-0'
           }
         />
       )}
