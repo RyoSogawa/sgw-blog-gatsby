@@ -24,10 +24,10 @@ const Header = (): JSX.Element => {
         <nav>
           <ul className={'flex items-center'}>
             <li className={'mr-1'}>
-              <NavLink href={'/'} title={'Posts'} />
+              <NavLink href={'/'}>Posts</NavLink>
             </li>
             <li className={'mr-4'}>
-              <NavLink href={'/about'} title={'About'} />
+              <NavLink href={'/about'}>About</NavLink>
             </li>
             <li>
               <a

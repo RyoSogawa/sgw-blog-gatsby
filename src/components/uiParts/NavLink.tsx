@@ -5,10 +5,10 @@ import { useLocation } from '@reach/router'
 
 export type NavLinkProps = {
   href: string
-  title: string
+  children: React.ReactNode
 }
 
-const NavLink = ({ title, href }: NavLinkProps): JSX.Element => {
+const NavLink = ({ children, href }: NavLinkProps): JSX.Element => {
   const { pathname } = useLocation()
 
   return (
@@ -19,7 +19,7 @@ const NavLink = ({ title, href }: NavLinkProps): JSX.Element => {
         pathname === href && 'text-blue-500'
       )}
     >
-      {title}
+      {children}
     </Link>
   )
 }
