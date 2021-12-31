@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from './Link'
 import clsx from 'clsx'
 import { useLocation } from '@reach/router'
 
