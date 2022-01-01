@@ -4,12 +4,13 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import IconFeed from '../svg/IconFeed'
 import BtnColorScheme from '../uiParts/BtnColorScheme'
+import IconGitHub from '../svg/IconGitHub'
 
 const Header = (): JSX.Element => {
   return (
     <header
       className={
-        'sticky top-0 z-sticky py-2 border-b border-gray-100 shadow-sm bg-white/90'
+        'sticky top-0 z-sticky py-2 border-b border-gray-100 shadow-sm dark:border-slate-700 bg-white/90 dark:bg-slate-900/90'
       }
     >
       <div className={'container flex items-center'}>
@@ -41,22 +42,18 @@ const Header = (): JSX.Element => {
                 rel={'noreferrer noopener'}
                 className={'grid place-items-center'}
               >
-                <StaticImage
-                  src={'../../images/service/github.svg'}
-                  alt={'GitHub'}
-                  className={'w-6 h-6 text-black'}
-                  placeholder={'tracedSVG'}
-                />
+                {/*<StaticImage*/}
+                {/*  src={'../../images/service/github.svg'}*/}
+                {/*  alt={'GitHub'}*/}
+                {/*  className={'w-6 h-6 text-black'}*/}
+                {/*  placeholder={'tracedSVG'}*/}
+                {/*/>*/}
+                <IconGitHub className={'w-6 h-6 fill-black dark:fill-white'} />
               </a>
             </li>
             <li>
-              <a
-                href={'/rss.xml'}
-                target={'_blank'}
-                rel={'noreferrer noopener'}
-                className={'grid place-items-center'}
-              >
-                <IconFeed className={'w-6 h-6 fill-black'} />
+              <a href={'/rss.xml'} className={'grid place-items-center'}>
+                <IconFeed className={'w-6 h-6 fill-black dark:fill-white'} />
               </a>
             </li>
           </ul>

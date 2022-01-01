@@ -15,7 +15,7 @@ const NavLink = ({ children, href }: NavLinkProps): JSX.Element => {
     <Link
       to={href}
       className={clsx(
-        'md:py-2 px-2 md:px-3 font-mono md:hover:bg-gray-100 rounded transition-colors',
+        'md:py-2 px-2 md:px-3 font-mono md:hover:bg-gray-100 rounded dark:md:hover:bg-slate-800 transition-[background-color]',
         pathname === href && 'text-blue-500'
       )}
     >

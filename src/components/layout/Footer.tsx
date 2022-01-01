@@ -5,7 +5,7 @@ const Footer = (): JSX.Element => {
   return (
     <footer
       className={
-        'sticky top-full py-4 mt-20 text-xs text-gray-600 bg-gray-100 border-t'
+        'sticky top-full py-4 mt-20 text-xs text-gray-600 dark:text-gray-400 bg-gray-100 border-t dark:bg-slate-800 dark:border-slate-600'
       }
     >
       <div className={'container flex gap-2 justify-between items-center'}>
@@ -45,7 +45,13 @@ const Footer = (): JSX.Element => {
           <StaticImage
             src="../../images/service/vercel.svg"
             alt="Vercel"
-            className={'w-[50px]'}
+            className={'dark:hidden w-[50px]'}
+            placeholder={'tracedSVG'}
+          />
+          <StaticImage
+            src="../../images/service/vercel-light.svg"
+            alt="Vercel"
+            className={'hidden dark:block w-[50px]'}
             placeholder={'tracedSVG'}
           />
         </a>
