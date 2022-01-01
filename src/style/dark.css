@@ -9,6 +9,10 @@ body {
         color: theme('colors.gray.200');
         background: theme('colors.black');
       }
+
+      .anchor.before svg{
+        fill:theme('colors.white');
+      }
     }
   }
 }
