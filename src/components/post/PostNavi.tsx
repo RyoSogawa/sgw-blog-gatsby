@@ -13,7 +13,7 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
     <Link
       to={href}
       className={
-        'group flex justify-between items-center py-4 px-6 w-full h-full hover:bg-gray-50 rounded border transition-colors'
+        'group flex justify-between items-center py-4 px-6 w-full h-full hover:bg-gray-50 rounded border dark:border-gray-600 transition-colors dark:hover:bg-slate-800'
       }
     >
       {direction === 'prev' && (
@@ -25,7 +25,9 @@ const PostNavi = ({ title, direction, href }: PostNaviProps): JSX.Element => {
         />
       )}
       <div className={'grow'}>
-        <span className="font-mono text-sm text-gray-500">{direction}</span>
+        <span className="font-mono text-sm text-gray-500 dark:text-gray-400">
+          {direction}
+        </span>
         <h2 className="font-bold line-clamp-2">{title}</h2>
       </div>
       {direction === 'next' && (

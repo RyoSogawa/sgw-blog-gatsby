@@ -30,7 +30,7 @@ const CardPost = ({ post, className }: CardPostProps): JSX.Element => {
       >
         <span
           className={
-            'inline-block px-2 mr-2 text-2xl bg-blue-100 group-hover:bg-blue-200 rounded transition-colors'
+            'inline-block px-2 mr-2 text-2xl bg-blue-100 group-hover:bg-blue-200 rounded transition-colors dark:bg-sky-900 dark:group-hover:bg-sky-800'
           }
         >
           {post.frontmatter?.emoji}

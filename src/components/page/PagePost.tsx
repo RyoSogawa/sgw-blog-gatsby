@@ -37,7 +37,9 @@ const PagePost = ({ post, prevPost, nextPost }: PagePostProps): JSX.Element => {
       </div>
       <h1 className={'mt-2 mb-4'}>
         <span
-          className={'inline-block px-2 mr-1 bg-blue-100 rounded select-none'}
+          className={
+            'inline-block px-2 mr-1 bg-blue-100 rounded select-none dark:bg-sky-900'
+          }
         >
           {post.frontmatter?.emoji}
         </span>
