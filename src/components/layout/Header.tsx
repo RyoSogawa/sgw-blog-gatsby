@@ -3,6 +3,7 @@ import NavLink from '../uiParts/NavLink'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import IconFeed from '../svg/IconFeed'
+import BtnColorScheme from '../uiParts/BtnColorScheme'
 
 const Header = (): JSX.Element => {
   return (
@@ -29,6 +30,9 @@ const Header = (): JSX.Element => {
             </li>
             <li className={'mr-3'}>
               <NavLink href={'/about/'}>About</NavLink>
+            </li>
+            <li className={'mr-4'}>
+              <BtnColorScheme />
             </li>
             <li className={'mr-4'}>
               <a
