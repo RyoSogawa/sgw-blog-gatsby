@@ -1,6 +1,11 @@
 import React from 'react'
+import clsx from 'clsx'
 
-export const FAVORITES: { name: string; imgFileName: string }[] = [
+export const FAVORITES: {
+  name: string
+  imgFileName: string
+  imgClassName?: string
+}[] = [
   {
     name: 'React',
     imgFileName: 'react.svg',
@@ -12,6 +17,7 @@ export const FAVORITES: { name: string; imgFileName: string }[] = [
   {
     name: 'TypeScript',
     imgFileName: 'typescript.svg',
+    imgClassName: 'bg-white',
   },
   {
     name: 'Storybook',
@@ -20,6 +26,7 @@ export const FAVORITES: { name: string; imgFileName: string }[] = [
   {
     name: 'JetBrains',
     imgFileName: 'jetbrains.svg',
+    imgClassName: 'bg-white',
   },
   {
     name: 'Figma',
@@ -49,7 +56,7 @@ const Favorites = (): JSX.Element => {
             <img
               src={'/images/favorite/' + favorite.imgFileName}
               alt=""
-              className={'inline-block h-12'}
+              className={clsx('inline-block h-12', favorite.imgClassName)}
             />
             <span className={'block mt-2 font-mono text-sm text-gray-400'}>
               {favorite.name}
