@@ -20,7 +20,11 @@ const PageAbout = () => {
           alt={''}
           className={'w-10 h-10 rounded-full shrink-0'}
         />
-        <div className={'mr-10 ml-3 font-mono font-bold shrink-0'}>
+        <div
+          className={
+            'mr-10 ml-3 font-mono font-bold text-black dark:text-white shrink-0'
+          }
+        >
           Ryo Sogawa
         </div>
         <Services />

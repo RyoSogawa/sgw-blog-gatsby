@@ -79,7 +79,7 @@ const Services = (): JSX.Element => {
           key={service.name}
           href={service.link}
           className={
-            'grid place-items-center w-8 h-8 hover:bg-gray-100 rounded border'
+            'grid place-items-center w-8 h-8 bg-white hover:bg-gray-100 rounded border dark:border-0'
           }
           target={'_blank'}
           rel={'noreferrer noopener'}
