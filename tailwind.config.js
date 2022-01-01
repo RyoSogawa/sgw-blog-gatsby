@@ -1,5 +1,8 @@
+const { typography } = require('./theme/typography')
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx,css}', './content/**/*.{md,mdx}'],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       mono: ['"JetBrains Mono"', 'monospace'],
@@ -30,7 +33,11 @@ module.exports = {
       colors: {
         black: '#231815',
       },
+      typography,
     },
+  },
+  variants: {
+    typography: ['dark'],
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
