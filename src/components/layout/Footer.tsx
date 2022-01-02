@@ -51,7 +51,7 @@ const Footer = (): JSX.Element => {
           <StaticImage
             src="../../images/service/vercel-light.svg"
             alt="Vercel"
-            className={'hidden dark:block w-[50px]'}
+            className={'dark:!block !hidden w-[50px]'}
             placeholder={'tracedSVG'}
           />
         </a>
