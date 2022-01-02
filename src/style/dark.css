@@ -7,7 +7,7 @@ body {
     .prose {
       :not(pre) > code.language-text {
         color: theme('colors.gray.200');
-        background: theme('colors.black');
+        background: theme('colors.gray.700');
       }
 
       .anchor.before svg{
