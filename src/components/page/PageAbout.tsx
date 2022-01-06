@@ -5,6 +5,7 @@ import WorkExperience from '../about/WorkExperience'
 import Favorites from '../about/Favorites'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../layout/Seo'
+import Link from '../uiParts/Link'
 
 const PageAbout = () => {
   return (
@@ -104,7 +105,8 @@ const PageAbout = () => {
       </section>
 
       <section>
-        <h3 id={'tariki-honganzi'}>他力本願寺</h3>
+        <h3 id={'music'}>Music</h3>
+        <h4 id={'tariki-honganzi'}>他力本願寺</h4>
         <p>
           大学生の頃のバンドです。
           <br />
@@ -117,10 +119,7 @@ const PageAbout = () => {
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         />
-      </section>
-
-      <section>
-        <h3 id={'favorite-artists'}>Favorite Artists</h3>
+        <h4 id={'favorite-artists'}>Favorite Artists</h4>
         <ul>
           <li>The Beatles</li>
           <li>Sex Pistols</li>
@@ -132,6 +131,17 @@ const PageAbout = () => {
           <li>The Blue Hearts</li>
           <li>坂本 慎太郎</li>
         </ul>
+        <h4 id={'others'}>Others</h4>
+        友人が音楽プロデューサーをしてた時期があり、声優ユニットミルキーホームズシスターズの
+        <Link to="https://www.nicovideo.jp/watch/sm25688422">みるみる体操</Link>
+        を作曲、ピアノの演奏をしました。
+      </section>
+
+      <section>
+        <h3>ストリートファイター</h3>
+        ゲームはもともと色々やってたのですが、ストリートファイター4と出会ってから格ゲーメインになりました。
+        <br />
+        4のメインキャラは元、5はメナトです。
       </section>
     </Layout>
   )
