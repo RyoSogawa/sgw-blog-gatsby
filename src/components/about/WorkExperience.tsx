@@ -5,8 +5,8 @@ const WorkExperience = (): JSX.Element => {
 
   const itemClass =
     style.timeline__item + ' dark:before:!bg-blue-300 dark:after:!bg-blue-300'
-  const dateClass =
-    style.timeline__date + ' dark:!text-blue-300 dark:!border-gray-700'
+  const yearClass =
+    style.timeline__year + ' dark:!text-blue-300 dark:!border-gray-700'
   const contentClass = style.timeline__content + ' dark:!border-gray-700'
 
   return (
@@ -14,7 +14,7 @@ const WorkExperience = (): JSX.Element => {
       <h2 id={'work-experience'}>Work Experience</h2>
       <ul className={style.timeline}>
         <li className={itemClass}>
-          <div className={dateClass}>2019年〜</div>
+          <div className={yearClass}>2019年〜</div>
           <div className={contentClass}>
             <h3 className={style.timeline__title}>開発チームマネージャー</h3>
             <p className={style.timeline__desc}>
@@ -32,7 +32,7 @@ const WorkExperience = (): JSX.Element => {
           </div>
         </li>
         <li className={itemClass}>
-          <div className={dateClass}>2016年〜</div>
+          <div className={yearClass}>2016年〜</div>
           <div className={contentClass}>
             <h3 className={style.timeline__title}>フリーランスに転向</h3>
             <ul>
@@ -54,7 +54,7 @@ const WorkExperience = (): JSX.Element => {
           </div>
         </li>
         <li className={itemClass}>
-          <div className={dateClass}>2014年〜</div>
+          <div className={yearClass}>2014年〜</div>
           <div className={contentClass}>
             <h3 className={style.timeline__title}>某システム会社に入社</h3>
             <ul>
