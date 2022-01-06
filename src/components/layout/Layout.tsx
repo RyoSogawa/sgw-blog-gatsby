@@ -17,7 +17,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Seo title={''} />
       <div>
         <Header />
-        <div className={'container mt-10'}>
+        <div className={'container mt-6 md:mt-10'}>
           <main className={'mx-auto prose dark:prose-dark'}>{children}</main>
         </div>
       </div>
