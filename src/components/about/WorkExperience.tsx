@@ -3,13 +3,19 @@ import React from 'react'
 const WorkExperience = (): JSX.Element => {
   const style = require('./WorkExperience.module.css')
 
+  const itemClass =
+    style.timeline__item + ' dark:before:!bg-blue-300 dark:after:!bg-blue-300'
+  const dateClass =
+    style.timeline__date + ' dark:!text-blue-300 dark:!border-gray-700'
+  const contentClass = style.timeline__content + ' dark:!border-gray-700'
+
   return (
     <section>
       <h2 id={'work-experience'}>Work Experience</h2>
       <ul className={style.timeline}>
-        <li className={style.timeline__item}>
-          <div className={style.timeline__date}>2019年〜</div>
-          <div className={style.timeline__content}>
+        <li className={itemClass}>
+          <div className={dateClass}>2019年〜</div>
+          <div className={contentClass}>
             <h3 className={style.timeline__title}>開発チームマネージャー</h3>
             <p className={style.timeline__desc}>
               学生の頃からの知り合い2人と共に開発チームを結成。
@@ -25,9 +31,9 @@ const WorkExperience = (): JSX.Element => {
             </ul>
           </div>
         </li>
-        <li className={style.timeline__item}>
-          <div className={style.timeline__date}>2016年〜</div>
-          <div className={style.timeline__content}>
+        <li className={itemClass}>
+          <div className={dateClass}>2016年〜</div>
+          <div className={contentClass}>
             <h3 className={style.timeline__title}>フリーランスに転向</h3>
             <ul>
               <li>
@@ -47,9 +53,9 @@ const WorkExperience = (): JSX.Element => {
             </ul>
           </div>
         </li>
-        <li className={style.timeline__item}>
-          <div className={style.timeline__date}>2014年〜</div>
-          <div className={style.timeline__content}>
+        <li className={itemClass}>
+          <div className={dateClass}>2014年〜</div>
+          <div className={contentClass}>
             <h3 className={style.timeline__title}>某システム会社に入社</h3>
             <ul>
               <li>VB.net / SQL / オブジェクト指向</li>

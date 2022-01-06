@@ -7,7 +7,7 @@
 
     &::before,
     &::after {
-      @apply bg-blue-400 dark:bg-blue-300 absolute w-3 h-3 rounded-full;
+      @apply bg-blue-400 absolute w-3 h-3 rounded-full;
 
       content: '';
       left: 2px;
@@ -27,11 +27,11 @@
 
   .timeline__date,
   .timeline__content {
-    @apply pl-8 border-gray-200 border-l-4 dark:border-gray-700;
+    @apply pl-8 border-gray-200 border-l-4;
   }
 
   .timeline__date {
-    @apply shrink-0 pt-3 text-blue-400 dark:text-blue-300;
+    @apply shrink-0 pt-3 text-blue-400;
     @apply md:border-none md:pl-0 md:w-[100px] md:pt-4;
   }
 
