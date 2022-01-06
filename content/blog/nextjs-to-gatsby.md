@@ -8,6 +8,10 @@ updatedAt: '2021-12-31'
 
 Next.js を使って作ったこのブログをなぜ、どのように Gatsby に移行したかを記録しようと思います。
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 ## なぜ移行したのか
 
 ### Next.js はここがつらかった

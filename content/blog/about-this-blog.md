@@ -19,6 +19,10 @@ https://github.com/RyoSogawa/sgw-blog-gatsby
 
 それぞれについて簡単に解説したいと思います。
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 ## Gatsby について
 
 このブログを作り始めたころ、ちょうど[Remix](https://remix.run)が登場したこともあり、

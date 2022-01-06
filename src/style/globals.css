@@ -25,6 +25,26 @@
   }
 }
 
+@layer components {
+  .toc {
+    @apply inline-block border rounded px-8 relative my-8 pt-2 pb-4 dark:border-slate-600;
+
+    &::before {
+      @apply block mb-4 text-center w-full font-bold text-gray-400 dark:text-slate-400;
+
+      content: '目次';
+    }
+
+    ul {
+      @apply list-disc pl-5;
+
+      a {
+        @apply hover:underline;
+      }
+    }
+  }
+}
+
 @layer utilities {
   .prose {
     code[class*="language-"],
