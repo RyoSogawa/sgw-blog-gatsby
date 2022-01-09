@@ -13,6 +13,7 @@ updatedAt: '2022-01-09'
 
 ```toc
 # This code block gets replaced with the TOC
+exclude: ※ロック楽典とは
 ```
 
 ## 僕がロック楽典と出会うまで
@@ -40,7 +41,7 @@ CM や BGM も含めて、耳に入る音楽をほぼすべて分析しながら
 そうしてるうちに、聞きやすい音楽の中にも **聞いたことのないコード進行** があることに気が付きました。  
 それを **「尊い」** と感じたのがロック楽典との出会いです。
 
-## ロック楽典はすごいぞ
+## ロック楽典は...すごい
 
 ロック楽典において大事なのは
 
@@ -49,19 +50,19 @@ CM や BGM も含めて、耳に入る音楽をほぼすべて分析しながら
 
 の**両立**です。
 
-今でこそ分析をせずに曲を自然体で聞くことが出来るようになってきました。
+今でこそ分析をせずに曲を自然体で聞くことが出来るようになってきました。  
 それでも「奥深さ」と「聞きやすさ」の両立はそれだけで芸術として成り立つと思っています。
 
 この感覚をなんとかして色んな人と共有したいので、この観点でイケてる曲をこれからたまに紹介していこうと思います。
 
-## 第一弾は「David Bowie\~世界を売った男\~」
-
-<iframe src="https://open.spotify.com/embed/track/4mWahKerLaVddUjb8d1Q4Q?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+## 第一弾は「David Bowie \~世界を売った男\~」
 
 David Bowie といえば最近亡くなってしまったグラムロックの代名詞的存在。
 そんな彼の曲の中でも、Nirvana が MTV アンプラグドでカバーしたことでも有名な **「世界を売った男」** を紹介します。
 
 ※聞いたことのない方はぜひ一度聞いてみてください。
+
+<iframe src="https://open.spotify.com/embed/track/4mWahKerLaVddUjb8d1Q4Q?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 この曲に出てくるコードは主に `Am` `Dm` `F` `C` の 4 つ。
 かなり親和性の高い４つのコードで、安定感、何なら古臭い感までします。
