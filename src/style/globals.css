@@ -43,6 +43,12 @@
       }
     }
   }
+
+  .gatsby-resp-image-figcaption{
+    @screen md {
+      @apply text-center;
+    }
+  }
 }
 
 @layer utilities {
