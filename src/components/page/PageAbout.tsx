@@ -49,7 +49,6 @@ const PageAbout = () => {
         </a>
         まで。
       </p>
-
       <section>
         <h2 id={'policy'}>Policy</h2>
         <p>
@@ -66,11 +65,8 @@ const PageAbout = () => {
         </ul>
         といった取り組みに特に力を入れています。
       </section>
-
       <Favorites />
-
       <WorkExperience />
-
       <section>
         <h2 id={'education'}>Education</h2>
         <ul>
@@ -88,10 +84,10 @@ const PageAbout = () => {
           <li>2014年 九州大学芸術工学部音響設計学科卒業</li>
         </ul>
       </section>
-
-      <h2 id={'hobbies'}>Hobbies</h2>
+      <hr />
+      <h1 id={'hobbies'}>Hobbies</h1>
       <section>
-        <h3 id={'keyboard'}>Keyboard</h3>
+        <h2 id={'keyboard'}>Keyboard</h2>
         <p>
           2019年頃からキーボード沼に浸かりはじめました。
           <br />
@@ -103,23 +99,34 @@ const PageAbout = () => {
           <li>補欠: HHKB</li>
         </ul>
       </section>
-
       <section>
-        <h3 id={'music'}>Music</h3>
-        <h4 id={'tariki-honganzi'}>他力本願寺</h4>
+        <h2 id={'music'}>Music</h2>
+        <h3 id={'tariki-honganzi'}>他力本願寺</h3>
         <p>
           大学生の頃のバンドです。
           <br />
           作曲・作詞・ギター・ボーカル・レコーディング・ミックスをしていて、器用貧乏っぷりが垣間見えます。
         </p>
         <iframe
+          title={'Spotify music player'}
           src="https://open.spotify.com/embed/album/5vlz4IQH6VTUWdQEqjjkQI?utm_source=generator"
           width="100%"
           height="210"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         />
-        <h4 id={'favorite-artists'}>Favorite Artists</h4>
+        <div className="mt-8 responsive-wrap">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/6F3stJ8fbxs"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <h3 id={'favorite-artists'}>Favorite Artists</h3>
         <ul>
           <li>The Beatles</li>
           <li>Sex Pistols</li>
@@ -131,14 +138,13 @@ const PageAbout = () => {
           <li>The Blue Hearts</li>
           <li>坂本 慎太郎</li>
         </ul>
-        <h4 id={'others'}>Others</h4>
-        友人が音楽プロデューサーをしてた時期があり、声優ユニットミルキーホームズシスターズの
+        <h3 id={'others'}>Others</h3>
+        友人が音楽プロデューサーをしてた時期があり、声優ユニットミルキーホームズの
         <Link to="https://www.nicovideo.jp/watch/sm25688422">みるみる体操</Link>
         を作曲、ピアノの演奏をしました。
       </section>
-
       <section>
-        <h3>ストリートファイター</h3>
+        <h2>ストリートファイター</h2>
         ゲームはもともと色々やってたのですが、ストリートファイター4と出会ってから格ゲーメインになりました。
         <br />
         4のメインキャラは元、5はメナトです。
