@@ -80,11 +80,13 @@ David Bowie といえば最近亡くなってしまったグラムロックの�
 <audio src="./The_Man_Who_Sold_The_World.mp3" controls="controls"></audio>
 
 あまりに唐突な **「C#」** 。  
-主要 4 コードの`Am` `Dm` `F` `C`の **音階全てに含まれない C#** がこんなところで出てくるとは。。  
+主要 4 コードの`Am` `Dm` `F` `C`の **どの音階にも含まれない C#** がこんなところで出てくるとは。。  
 にも関わらず心地よい。
 
 前後のフレーズで馬鹿みたいに正直な音階を使ってるギャップもあって、
 これでもかと言わんばかりに神秘的な感じが出てます。
+
+## こんな David Bowie は嫌だ
 
 もしここに既出の安定感のあるコードを使っていたらこうなってます。
 
@@ -106,10 +108,6 @@ David Bowie といえば最近亡くなってしまったグラムロックの�
 あまりに"フツー"過ぎて。
 
 ここまで聞いた上で本来の`C#`を聞いてみましょう。
-
-<audio src="./The_Man_Who_Sold_The_World.mp3" controls="controls"></audio>
-
-最後にもう一度本来のフレーズを聞いてみましょう。
 「面白いのに聞きやすい」というバランスを感じてもらえるでしょうか？
 
 <iframe src="https://open.spotify.com/embed/track/4mWahKerLaVddUjb8d1Q4Q?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
