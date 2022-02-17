@@ -23,7 +23,8 @@
     "format:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:lint": "yarn lint:js --fix",
     "format:text": "textlint ./content/**/*.md --fix",
-    "format": "yarn format:prettier && yarn format:lint && yarn format:text"
+    "format": "yarn format:prettier && yarn format:lint && yarn format:text",
+    "prepare": "husky install"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -63,6 +64,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-tailwindcss": "^1.17.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.7",
@@ -71,5 +74,16 @@
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,html}": "prettier --write",
+    "*.md": [
+      "prettier --write",
+      "textlint --fix"
+    ]
   }
 }
